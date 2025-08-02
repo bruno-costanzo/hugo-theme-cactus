@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="content index py4">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle">
+        Tag: {{ .Title }}
+      </h1>
+      <div class="meta">
+        {{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}
+      </div>
+    </header>
+    
+    <div class="content" itemprop="articleBody">
+      {{ range .Pages }}
+      <div class="post-preview">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="meta">
+          {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
+          <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time>
+          {{ if .Params.tags }}
+          <div class="article-tag">
+            {{ range $index, $value := .Params.tags }}
+            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
+            {{ $tagURL := printf "/tags/%s/" ($value | urlize) }}
+            <a class="tag-link" href="{{ $tagURL | absLangURL }}" rel="tag">#{{ $value }}</a>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+        {{ if .Summary }}
+        <div class="summary">
+          {{ .Summary }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </article>
+</div>
+{{ end }}

@@ -27,7 +27,7 @@ body {
   color: $color-text;
   font-display: swap;
   font-weight: 400;
-  font-size: $font-size;
+  @include fluid-type(14px, 18px);
   font-family: $font-family-body;
   line-height: $line-height;
   text-rendering: geometricPrecision;
@@ -116,6 +116,16 @@ body {
 }
 .max-width {
   max-width: $page-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @include respond-to('tablet') {
+    padding: 0 2rem;
+  }
+  
+  @include respond-to('desktop') {
+    padding: 0 3rem;
+  }
 }
 @media (max-width: 480px) {  // smaller margins at smaller screen widths
   .px3 {
@@ -196,6 +206,34 @@ code {
   border: 1px dotted $color-border;
   border-radius: 2px;
   -webkit-border-radius: 2px;
+}
+
+// Post navigation styles
+.post-navigation {
+  margin-bottom: 2rem;
+  
+  .back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: $color-accent-1;
+    text-decoration: none;
+    border: 1px solid $color-accent-1;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    
+    &:hover {
+      background-color: $color-accent-1;
+      color: white;
+      background-image: none;
+    }
+    
+    i {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .highlight {

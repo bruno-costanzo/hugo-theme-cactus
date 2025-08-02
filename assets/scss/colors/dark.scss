@@ -1,13 +1,14 @@
-$color-background: #1d1f21;
+// Ruby-inspired color palette
+$color-background: #1a1a1a; // Rich dark background
 $color-footer-mobile-1: lighten($color-background, 2%);
 $color-footer-mobile-2: lighten($color-background, 10%);
-$color-background-code: lighten($color-background, 2%);
+$color-background-code: #2a2a2a; // Slightly lighter for code blocks
 $color-border: #666;
-$color-meta: #666;
+$color-meta: #999; // Lighter meta text
 $color-meta-code: #666;
-$color-link: rgba(212, 128, 170, 1);
-$color-text: #c9cacc;
+$color-link: #cc342d; // Ruby red for links
+$color-text: #e8e8e8; // Clean white text
 $color-accent-3: #cccccc;
 $color-accent-2: #eeeeee;
-$color-accent-1: #2bbc8a;
-$color-quote: #ccffb6;
+$color-accent-1: #cc342d; // Ruby red accent
+$color-quote: #ffe6e6; // Light ruby tint for quotes

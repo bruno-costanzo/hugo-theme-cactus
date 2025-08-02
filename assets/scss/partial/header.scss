@@ -10,8 +10,8 @@
     letter-spacing: .01em;
     font-weight: 700;
     font-style: normal;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    @include fluid-type(1.25rem, 2rem);
+    line-height: 1.4;
 
     @include antialias();
   }
@@ -70,6 +70,40 @@
 
         a {
           margin-right: 0;
+        }
+      }
+      
+      // Language selector styles
+      .lang-selector {
+        margin-left: 15px;
+        
+        .active-lang {
+          color: $color-text;
+          font-weight: 600;
+          margin-right: 0;
+          padding: 2px 6px;
+          border-radius: 3px;
+          background-color: rgba($color-accent-1, 0.1);
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+        
+        a {
+          margin-left: 10px;
+          margin-right: 0;
+          padding: 2px 6px;
+          border-radius: 3px;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          transition: all 0.2s ease;
+          
+          &:hover {
+            background-color: rgba($color-accent-1, 0.15);
+            text-decoration: none;
+            background-image: none;
+          }
         }
       }
     }

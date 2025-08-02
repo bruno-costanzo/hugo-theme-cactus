@@ -1,14 +1,14 @@
-// by @GabiThume (https://github.com/gabithume)
-$color-background: #e2e0de;
+// French Blue inspired theme
+$color-background: #fefcf7; // Soft cream background
 $color-footer-mobile-1: darken($color-background, 2%);
 $color-footer-mobile-2: darken($color-background, 10%);
-$color-background-code: darken($color-background, 2%);
-$color-border: #666;
+$color-background-code: #f8f5f0; // Light cream for code blocks
+$color-border: #e0e0e0;
 $color-meta: #666;
 $color-meta-code: lighten($color-meta, 10%);
-$color-link: rgba(43, 188, 138, 1);
-$color-text: #363533;
+$color-link: #003f7f; // French Blue for links
+$color-text: #2c2c2c; // Dark grey text
 $color-accent-3: #666666;
 $color-accent-2: #111111;
-$color-accent-1: #d44375;
-$color-quote: #ab2251;
+$color-accent-1: #003f7f; // French Blue accent
+$color-quote: #cce7ff; // Light blue for quotes
